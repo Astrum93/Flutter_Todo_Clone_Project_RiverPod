@@ -41,15 +41,15 @@ class WriteTodoDialog extends HookConsumerDialogWidget<WriteTodoResult> {
     final secondTime = useTimerSecond();
 
     final tenTimesCount = useMemoized(() {
-      print('tenTimesCount');
-      print(secondTime);
-      print(secondTime ~/ 10);
+      //print('tenTimesCount');
+      //print(secondTime);
+      //print(secondTime ~/ 10);
       return secondTime ~/ 10;
     }, [secondTime]);
 
     final twentyTimesCount = useMemoized(() {
-      print('twentyTimesCount');
-      print(tenTimesCount ~/ 2);
+      //print('twentyTimesCount');
+      //print(tenTimesCount ~/ 2);
       return tenTimesCount ~/ 2;
     }, [tenTimesCount]);
 
