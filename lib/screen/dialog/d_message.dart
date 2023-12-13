@@ -1,7 +1,7 @@
 import 'package:fast_app_base/common/widget/scaffold/center_dialog_scaffold.dart';
 import 'package:fast_app_base/data/simple_result.dart';
 import 'package:flutter/material.dart';
-import 'package:nav/dialog/dialog.dart';
+import 'package:nav_hooks/dialog/dialog.dart';
 
 import '../../common/common.dart';
 
@@ -21,6 +21,7 @@ class MessageDialog extends DialogWidget<SimpleResult> {
     this.cancelable = true,
     this.textAlign = TextAlign.start,
   });
+
   //:super(barrierDismissible: false); super 파라미터를 통해서 다이얼로그 커스텀 가능
 
   @override
@@ -38,7 +39,8 @@ class _MessageDialogState extends DialogState<MessageDialog> {
         body: Container(
             constraints: BoxConstraints(maxHeight: context.deviceHeight),
             decoration: BoxDecoration(
-                color: context.appColors.drawerBg, borderRadius: BorderRadius.circular(15)),
+                color: context.appColors.drawerBg,
+                borderRadius: BorderRadius.circular(15)),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
